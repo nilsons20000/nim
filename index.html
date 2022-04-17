@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+</head>
+<body>
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="btn game-mode two-player">Two Player</button><br><br>
+      <button class="btn game-mode computer">Computer</button><br><br>
+
+      <label class='players_game'>Player 1 Name:<input id="first_player_name" type='text' name='first_player'></label>
+      <label class='players_game'>Player 2 Name:<input id="second_player_name" type='text' name='second_player'></label>
+
+      <label class='players_computer'>Your Name:<input id="player_name" type='text' name='players_computer'>
+
+        <div class="move_choose" id="move_choose">
+          <button id="move_check_computer" class="move  btn move_comp waves-effect btn-flat">Computer</button>
+          <button id="move_check_player"   class="move  btn  move_player waves-effect btn-flat">Player</button>
+        </div>
+    </div>
+    <div class="modal-footer">
+      <button id="modal-close" class="modal-close waves-effect btn-flat">Play!</button>
+    </div>
+  </div>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="reset"  id="reset">Reset</a></li>
+        <li><a href="index.html">Game Mode</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li><a class="reset">Reset</a></li>
+    <li><a href="index.html">Game Mode</a></li>
+  </ul>
+
+  <main class="container">
+    <div id="gameboard">
+    </div>
+
+    <div class="button-panel">
+      <div id="first_player">Player 1</div>
+      <div id="second_player">Player 2</div>
+    </div>
+      <button disabled class="waves-light btn-large switch-player flow-text" id="end_turn">End turn</button>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
